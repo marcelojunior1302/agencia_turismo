@@ -1,0 +1,31 @@
+/* Adicione estilos personalizados aqui */
+
+.root {
+    -fx-background-color: #f0f0f0;
+}
+
+MenuBar {
+    -fx-background-color: #007acc;
+}
+
+Menu {
+    -fx-text-fill: white;
+}
+
+Button {
+    -fx-font-size: 14;
+    -fx-pref-width: 150;
+}
+
+VBox {
+    -fx-background-color: #303030;
+    -fx-spacing: 10;
+    -fx-padding: 10;
+}
+
+VBox Button {
+    -fx-text-fill: white;
+}
+
+/* Estilos personalizados para a área de conteúdo podem ser adicionados aqui */
+
