@@ -1,31 +1,48 @@
-/* Adicione estilos personalizados aqui */
-
-.root {
-    -fx-background-color: #f0f0f0;
+.main-pane {
+    -fx-background-color: #EAF0F6;
 }
 
-MenuBar {
-    -fx-background-color: #007acc;
+.app-title {
+    -fx-font-family: 'Doppio One';
+    -fx-font-size: 27px;
+    -fx-font-weight: 400;
+    -fx-text-fill: #FFFFFF;
+    -fx-alignment: center;
 }
 
-Menu {
-    -fx-text-fill: white;
+.menu {
+    -fx-background-color: #3B758C;
+    -fx-pref-width: 290;
 }
 
-Button {
-    -fx-font-size: 14;
-    -fx-pref-width: 150;
+.menu-item {
+    -fx-font-size: 27px;
+    -fx-text-fill: #FFFFFF;
+    -fx-alignment: CENTER;
 }
 
-VBox {
-    -fx-background-color: #303030;
-    -fx-spacing: 10;
-    -fx-padding: 10;
+.heading-label {
+    -fx-font-size: 22px; /* Define o tamanho da fonte para o rótulo */
+    -fx-font-weight: bold; /* Define a fonte em negrito */
+    -fx-text-fill: #333333; /* Define a cor do texto, neste caso, um tom de cinza */
 }
 
-VBox Button {
-    -fx-text-fill: white;
+.clientesButton {
+    -fx-position: absolute;
+    -fx-width: 250px;
+    -fx-height: 47px;
+    -fx-left: 377px;
+    -fx-top: 94px;
+    -fx-background-color: #13526B;
+    -fx-border-radius: 3px;
+    -fx-font-family: 'Doppio One';
+    -fx-font-style: normal;
+    -fx-font-weight: 400;
+    -fx-font-size: 15px;
+    -fx-line-height: 19px;
+    -fx-display: flex;
+    -fx-align-items: center;
+    -fx-text-align: center;
+    -fx-text-transform: capitalize;
+    -fx-text-fill: #FFFFFF;
 }
-
-/* Estilos personalizados para a área de conteúdo podem ser adicionados aqui */
-

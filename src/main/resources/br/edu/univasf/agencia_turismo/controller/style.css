@@ -46,3 +46,28 @@
     -fx-text-transform: capitalize;
     -fx-text-fill: #FFFFFF;
 }
+
+.headerCadastro {
+    -fx-font-family: 'Doppio One';
+    -fx-font-style: normal;
+    -fx-font-weight: 400;
+    -fx-font-size: 20px;
+    -fx-line-height: 25px;
+    -fx-text-transform: capitalize;
+    -fx-text-fill: #FFFFFF;
+}
+
+.labelNomeCompleto {
+
+
+    -fx-font-family: 'Doppio One';
+        -fx-font-style: normal;
+        -fx-font-weight: 400;
+        -fx-font-size: 15px;
+        -fx-text-fill: #000000;
+        -fx-text-transform: capitalize;
+        -fx-alignment: CENTER_LEFT;
+        -fx-text-alignment: LEFT;
+        -fx-padding: 0;
+
+}
