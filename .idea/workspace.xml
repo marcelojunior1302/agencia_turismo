@@ -4,23 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e8b3be-9c65-4a3a-b25e-bff793968bd2" name="Changes" comment="">
+    <list default="true" id="08e8b3be-9c65-4a3a-b25e-bff793968bd2" name="Changes" comment="Adicionar código inicial das primeiras classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/CadastroClientesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/CadastroClientesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/ClientesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/ClientesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/dao/ClienteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/dao/ClienteDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/model/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/model/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/service/ClienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/service/ClienteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/util/ConnectionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/util/ConnectionFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/cadastroClientes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/cadastroClientes.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/clientes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/clientes.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +67,15 @@
       <option name="presentableId" value="Default" />
       <updated>1696941219585</updated>
     </task>
+    <task id="LOCAL-00001" summary="Adicionar código inicial das primeiras classes">
+      <option name="closed" value="true" />
+      <created>1697808407481</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1697808407481</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -88,5 +88,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Adicionar código inicial das primeiras classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionar código inicial das primeiras classes" />
   </component>
 </project>

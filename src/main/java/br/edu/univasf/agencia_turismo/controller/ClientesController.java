@@ -11,18 +11,35 @@ public class ClientesController {
 
     @FXML
     private Button cadastrarClienteButton;
+
+    @FXML
+    private Button botaoVoltar;
     @FXML
     private void onCadastrarClienteButtonClick() {
 
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("cadastroClientes.fxml"));
             Parent cadastroClientes = loader.load();
-            CadastroClientesController cadastroClientesController = loader.getController();
+
 
             Scene scene = cadastrarClienteButton.getScene();
             scene.setRoot(cadastroClientes);
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
+    @FXML
+    private void onVoltarButtonClick() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/univasf/agencia_turismo/home.fxml"));
+            Parent clientes = loader.load();
+            Scene scene = botaoVoltar.getScene();
+            scene.setRoot(clientes);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 }

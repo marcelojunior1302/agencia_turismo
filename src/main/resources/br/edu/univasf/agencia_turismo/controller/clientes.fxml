@@ -21,5 +21,9 @@
                 <Label layoutX="18.0" layoutY="410.0" prefHeight="78.0" prefWidth="274.0" styleClass="menu-item" stylesheets="@style.css" text="Relatórios" />
             </children>
         </VBox>
+      <Button fx:id="cadastrarClienteButton1" layoutX="351.0" layoutY="243.0" mnemonicParsing="false" onAction="#onCadastrarClienteButtonClick" prefHeight="33.0" prefWidth="225.0" styleClass="clientesButton" stylesheets="@style.css" text="Atualizar Dados" />
+      <Button fx:id="cadastrarClienteButton11" layoutX="351.0" layoutY="323.0" mnemonicParsing="false" onAction="#onCadastrarClienteButtonClick" prefHeight="33.0" prefWidth="225.0" styleClass="clientesButton" stylesheets="@style.css" text="Listar Clientes" />
+      <Button fx:id="cadastrarClienteButton111" layoutX="351.0" layoutY="403.0" mnemonicParsing="false" onAction="#onCadastrarClienteButtonClick" prefHeight="33.0" prefWidth="225.0" styleClass="clientesButton" stylesheets="@style.css" text="Remover Cliente" />
+      <Button fx:id="botaoVoltar" layoutX="1216.0" layoutY="101.0" mnemonicParsing="false" onAction="#onVoltarButtonClick" prefHeight="50.0" prefWidth="50.0" styleClass="botao-redondo" stylesheets="@style.css" text="&lt;-" />
     </children>
 </AnchorPane>

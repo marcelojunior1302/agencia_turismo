@@ -26,7 +26,6 @@ public class HomeController implements Initializable {
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("clientes.fxml"));
             Parent clientesInterface = loader.load();
-            ClientesController clientesController = loader.getController();
 
             Scene scene = layoutPrincipal.getScene();
             scene.setRoot(clientesInterface);
