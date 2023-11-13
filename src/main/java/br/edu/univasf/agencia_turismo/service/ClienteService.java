@@ -6,7 +6,7 @@ import br.edu.univasf.agencia_turismo.dao.ClienteDAO;
 import java.util.List;
 
 public class ClienteService {
-    private ClienteDAO clienteDAO;
+    private final ClienteDAO clienteDAO;
 
     public ClienteService() {
         this.clienteDAO = new ClienteDAO();
@@ -16,16 +16,16 @@ public class ClienteService {
         clienteDAO.adicionarCliente(cliente);
     }
 
-    public Cliente buscarCliente(int id) {
-        return clienteDAO.buscarCliente(id);
+    public Cliente buscarCliente(String cpf) {
+        return clienteDAO.buscarCliente(cpf);
     }
 
     public void atualizarCliente(Cliente cliente) {
         clienteDAO.atualizarCliente(cliente);
     }
 
-    public void removerCliente(int id) {
-        clienteDAO.removerCliente(id);
+    public void removerCliente(String cpf) {
+        clienteDAO.removerCliente(cpf);
     }
 
     public List<Cliente> listarClientes() {

@@ -13,6 +13,9 @@ public class ClientesController {
     private Button cadastrarClienteButton;
 
     @FXML
+    private Button listarClientesButton;
+
+    @FXML
     private Button botaoVoltar;
     @FXML
     private void onCadastrarClienteButtonClick() {
@@ -24,6 +27,22 @@ public class ClientesController {
 
             Scene scene = cadastrarClienteButton.getScene();
             scene.setRoot(cadastroClientes);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @FXML
+    private void onListarClientesButtonClick() {
+
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("listarClientes.fxml"));
+            Parent listarClientes = loader.load();
+
+
+            Scene scene = listarClientesButton.getScene();
+            scene.setRoot(listarClientes);
         } catch (IOException e) {
             e.printStackTrace();
         }

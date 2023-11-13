@@ -8,11 +8,15 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import br.edu.univasf.agencia_turismo.model.Cliente;
 import br.edu.univasf.agencia_turismo.service.ClienteService;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 
 import java.io.IOException;
 
 public class CadastroClientesController {
 
+    @FXML
+    private TextField cpfField;
     @FXML
     private TextField nomeField;
     @FXML
@@ -23,24 +27,26 @@ public class CadastroClientesController {
     private TextField historicoField;
     @FXML
     private TextField preferenciasField;
-    @FXML
-    private Button finalizarCadastroButton;
+
     @FXML
     private Button botaoVoltar;
 
     @FXML
     private void finalizarCadastro() {
 
+        String cpf = cpfField.getText();
         String nome = nomeField.getText();
         String email = emailField.getText();
         String telefone = telefoneField.getText();
         String historicoViagens = historicoField.getText();
         String preferencias = preferenciasField.getText();
 
-        Cliente novoCliente = new Cliente(nome, email, telefone, historicoViagens, preferencias);
+        Cliente novoCliente = new Cliente(cpf, nome, email, telefone, historicoViagens, preferencias);
 
         ClienteService clienteService = new ClienteService();
         clienteService.adicionarCliente(novoCliente);
+
+        exibirAlerta();
 
         limparCampos();
     }
@@ -58,10 +64,19 @@ public class CadastroClientesController {
     }
 
     private void limparCampos() {
+        cpfField.clear();
         nomeField.clear();
         emailField.clear();
         telefoneField.clear();
         historicoField.clear();
         preferenciasField.clear();
+    }
+
+    private void exibirAlerta() {
+        Alert alert = new Alert(AlertType.INFORMATION);
+        alert.setTitle("Informação");
+        alert.setHeaderText(null);
+        alert.setContentText("Cadastro realizado com sucesso!");
+        alert.showAndWait();
     }
 }
