@@ -10,15 +10,15 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-
 import java.io.IOException;
 import java.util.List;
 
 public class ListarClientesController {
+
     @FXML
     private Button botaoVoltar;
     @FXML
-    private TableView<Cliente> tableView; // Sua TableView
+    private TableView<Cliente> tableView;
     @FXML
     private TableColumn<Cliente, String> coluna_cpf;
     @FXML

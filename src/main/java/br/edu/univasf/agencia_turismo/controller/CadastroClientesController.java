@@ -10,7 +10,6 @@ import br.edu.univasf.agencia_turismo.model.Cliente;
 import br.edu.univasf.agencia_turismo.service.ClienteService;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
-
 import java.io.IOException;
 
 public class CadastroClientesController {
@@ -27,7 +26,6 @@ public class CadastroClientesController {
     private TextField historicoField;
     @FXML
     private TextField preferenciasField;
-
     @FXML
     private Button botaoVoltar;
 
@@ -50,7 +48,6 @@ public class CadastroClientesController {
 
         limparCampos();
     }
-
     @FXML
     private void onVoltarButtonClick() {
         try {

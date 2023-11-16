@@ -12,4 +12,5 @@ module br.edu.univasf.agencia_turismo {
     exports br.edu.univasf.agencia_turismo.controller;
 
     opens br.edu.univasf.agencia_turismo.model;
+
 }

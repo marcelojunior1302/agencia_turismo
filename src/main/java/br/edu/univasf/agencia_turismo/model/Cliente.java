@@ -1,6 +1,5 @@
 package br.edu.univasf.agencia_turismo.model;
 
-
 public class Cliente {
     private String cpf;
     private String nome;
@@ -21,6 +20,14 @@ public class Cliente {
         this.historicoViagens = historicoViagens;
         this.preferencias = preferencias;
 
+    }
+
+    public Cliente( String nome, String email, String telefone, String historicoViagens, String preferencias) {
+        this.nome = nome;
+        this.email = email;
+        this.telefone = telefone;
+        this.historicoViagens = historicoViagens;
+        this.preferencias = preferencias;
     }
 
     public String getCpf() {

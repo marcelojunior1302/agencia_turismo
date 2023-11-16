@@ -6,24 +6,39 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane id="layoutPrincipal" fx:id="layoutPrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="main-pane" stylesheets="@style.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="br.edu.univasf.agencia_turismo.controller.ClientesController">
-    <children>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#13526B" height="90.0" stroke="#13526b" strokeType="INSIDE" width="1280.0" />
-        <Button fx:id="cadastrarClienteButton" layoutX="351.0" layoutY="163.0" mnemonicParsing="false" onAction="#onCadastrarClienteButtonClick" prefHeight="33.0" prefWidth="225.0" styleClass="clientesButton" stylesheets="@style.css" text="Cadastrar Cliente" />
-        <Label alignment="CENTER" prefHeight="90.0" prefWidth="290.0" styleClass="app-title" stylesheets="@style.css" text="PROTO.ALPHA" />
-        <VBox fx:id="menuOpcoes" layoutY="90.0" prefHeight="632.0" prefWidth="256.0" styleClass="menu">
-            <children>
-                <Label prefHeight="44.0" text="espaçamento" visible="false" />
-                <Label prefHeight="78.0" prefWidth="290.0" styleClass="menu-item" stylesheets="@style.css" text="Pacotes" />
-                <Label fx:id="clientesLabel" layoutX="18.0" layoutY="77.0" prefHeight="78.0" prefWidth="290.0" style="-fx-background-color: #163B49;" styleClass="menu-item" stylesheets="@style.css" text="Clientes" />
-                <Label layoutX="18.0" layoutY="188.0" prefHeight="78.0" prefWidth="290.0" styleClass="menu-item" stylesheets="@style.css" text="Itinerários" />
-                <Label layoutX="18.0" layoutY="299.0" prefHeight="78.0" prefWidth="290.0" styleClass="menu-item" stylesheets="@style.css" text="Pagamentos" />
-                <Label layoutX="18.0" layoutY="410.0" prefHeight="78.0" prefWidth="274.0" styleClass="menu-item" stylesheets="@style.css" text="Relatórios" />
-            </children>
-        </VBox>
-      <Button fx:id="atualizarDadosButton" layoutX="351.0" layoutY="243.0" mnemonicParsing="false" onAction="#onCadastrarClienteButtonClick" prefHeight="33.0" prefWidth="225.0" styleClass="clientesButton" stylesheets="@style.css" text="Atualizar Dados" />
-      <Button fx:id="listarClientesButton" layoutX="351.0" layoutY="323.0" mnemonicParsing="false" onAction="#onListarClientesButtonClick" prefHeight="33.0" prefWidth="225.0" styleClass="clientesButton" stylesheets="@style.css" text="Listar Clientes" />
-      <Button fx:id="removerClienteButton" layoutX="351.0" layoutY="403.0" mnemonicParsing="false" onAction="#onCadastrarClienteButtonClick" prefHeight="33.0" prefWidth="225.0" styleClass="clientesButton" stylesheets="@style.css" text="Remover Cliente" />
-      <Button fx:id="botaoVoltar" layoutX="1216.0" layoutY="101.0" mnemonicParsing="false" onAction="#onVoltarButtonClick" prefHeight="50.0" prefWidth="50.0" styleClass="botao-redondo" stylesheets="@style.css" text="&lt;-" />
-    </children>
+<AnchorPane id="layoutPrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="720.0" prefWidth="1280.0" styleClass="main-pane" stylesheets="@style.css"
+            xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="br.edu.univasf.agencia_turismo.controller.ClientesController">
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#13526B" height="90.0" stroke="#13526b" strokeType="INSIDE"
+               width="1280.0"/>
+    <Button fx:id="cadastrarClienteButton" layoutX="351.0" layoutY="163.0" mnemonicParsing="false"
+            onAction="#onCadastrarClienteButtonClick" prefHeight="33.0" prefWidth="225.0" styleClass="clientesButton"
+            stylesheets="@style.css" text="Cadastrar Cliente"/>
+    <Label alignment="CENTER" prefHeight="90.0" prefWidth="290.0" styleClass="app-title" stylesheets="@style.css"
+           text="PROTO.ALPHA"/>
+    <VBox layoutY="90.0" prefHeight="632.0" prefWidth="256.0" styleClass="menu">
+        <Label prefHeight="44.0" text="espaçamento" visible="false"/>
+        <Label prefHeight="78.0" prefWidth="290.0" styleClass="menu-item" stylesheets="@style.css" text="Pacotes"/>
+        <Label layoutX="18.0" layoutY="77.0" prefHeight="78.0" prefWidth="290.0"
+               style="-fx-background-color: #163B49;" styleClass="menu-item" stylesheets="@style.css"
+               text="Clientes"/>
+        <Label layoutX="18.0" layoutY="188.0" prefHeight="78.0" prefWidth="290.0" styleClass="menu-item"
+               stylesheets="@style.css" text="Itinerários"/>
+        <Label layoutX="18.0" layoutY="299.0" prefHeight="78.0" prefWidth="290.0" styleClass="menu-item"
+               stylesheets="@style.css" text="Pagamentos"/>
+        <Label layoutX="18.0" layoutY="410.0" prefHeight="78.0" prefWidth="274.0" styleClass="menu-item"
+               stylesheets="@style.css" text="Relatórios"/>
+    </VBox>
+    <Button fx:id="atualizarDadosButton" layoutX="351.0" layoutY="243.0" mnemonicParsing="false"
+            onAction="#onAtualizarDadosButtonClick" prefHeight="33.0" prefWidth="225.0" styleClass="clientesButton"
+            stylesheets="@style.css" text="Atualizar Dados"/>
+    <Button fx:id="listarClientesButton" layoutX="351.0" layoutY="323.0" mnemonicParsing="false"
+            onAction="#onListarClientesButtonClick" prefHeight="33.0" prefWidth="225.0" styleClass="clientesButton"
+            stylesheets="@style.css" text="Listar Clientes"/>
+    <Button fx:id="removerClienteButton" layoutX="351.0" layoutY="403.0" mnemonicParsing="false"
+            onAction="#onRemoverClienteButtonClick" prefHeight="33.0" prefWidth="225.0" styleClass="clientesButton"
+            stylesheets="@style.css" text="Remover Cliente"/>
+    <Button fx:id="botaoVoltar" layoutX="1216.0" layoutY="101.0" mnemonicParsing="false" onAction="#onVoltarButtonClick"
+            prefHeight="50.0" prefWidth="50.0" styleClass="botao-redondo" stylesheets="@style.css" text="&lt;-"/>
 </AnchorPane>

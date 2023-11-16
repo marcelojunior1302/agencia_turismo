@@ -9,34 +9,43 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane id="layoutPrincipal" fx:id="layoutPrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="main-pane" stylesheets="@style.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="br.edu.univasf.agencia_turismo.controller.ListarClientesController">
-    <children>
-        <VBox fx:id="menuOpcoes" layoutY="90.0" prefHeight="632.0" prefWidth="256.0" styleClass="menu">
-            <children>
-                <Label prefHeight="44.0" text="espaçamento" visible="false" />
-                <Label prefHeight="78.0" prefWidth="290.0" styleClass="menu-item" stylesheets="@style.css" text="Pacotes" />
-                <Label fx:id="clientesLabel" layoutX="18.0" layoutY="77.0" prefHeight="78.0" prefWidth="290.0" style="-fx-background-color: #163B49;" styleClass="menu-item" stylesheets="@style.css" text="Clientes" />
-                <Label layoutX="18.0" layoutY="188.0" prefHeight="78.0" prefWidth="290.0" styleClass="menu-item" stylesheets="@style.css" text="Itinerários" />
-                <Label layoutX="18.0" layoutY="299.0" prefHeight="78.0" prefWidth="290.0" styleClass="menu-item" stylesheets="@style.css" text="Pagamentos" />
-                <Label layoutX="18.0" layoutY="410.0" prefHeight="78.0" prefWidth="274.0" styleClass="menu-item" stylesheets="@style.css" text="Relatórios" />
-            </children>
-        </VBox>
-      <Label layoutX="326.0" layoutY="166.0" prefHeight="33.0" prefWidth="905.0" style="-fx-background-color: #13526B;" styleClass="headerCadastro" stylesheets="@style.css" text="Listar Clientes">
-         <padding>
-            <Insets left="50.0" />
-         </padding></Label>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#13526B" height="90.0" stroke="#13526b" strokeType="INSIDE" width="1280.0" />
-        <Label alignment="CENTER" prefHeight="90.0" prefWidth="290.0" styleClass="app-title" stylesheets="@style.css" text="PROTO.ALPHA" />
-      <Button fx:id="botaoVoltar" layoutX="1216.0" layoutY="101.0" mnemonicParsing="false" onAction="#onVoltarButtonClick" prefHeight="50.0" prefWidth="50.0" styleClass="botao-redondo" stylesheets="@style.css" text="&lt;-" />
-      <TableView fx:id="tableView" layoutX="326.0" layoutY="220.0" prefHeight="389.0" prefWidth="905.0">
-        <columns>
-            <TableColumn fx:id="coluna_cpf" prefWidth="69.0" text="cpf" />
-            <TableColumn fx:id="coluna_nome" prefWidth="231.0" text="nome" />
-            <TableColumn fx:id="coluna_email" prefWidth="147.0" text="e-mail" />
-            <TableColumn fx:id="coluna_fone" prefWidth="116.0" text="telefone" />
-            <TableColumn fx:id="coluna_historico" prefWidth="187.0" text="histórico de viagens" />
-            <TableColumn fx:id="coluna_preferencias" prefWidth="154.0" text="preferências" />
-        </columns>
-      </TableView>
-    </children>
+<AnchorPane id="layoutPrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="720.0" prefWidth="1280.0" styleClass="main-pane" stylesheets="@style.css"
+            xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="br.edu.univasf.agencia_turismo.controller.ListarClientesController">
+    <VBox layoutY="90.0" prefHeight="632.0" prefWidth="256.0" styleClass="menu">
+        <Label prefHeight="44.0" text="espaçamento" visible="false"/>
+        <Label prefHeight="78.0" prefWidth="290.0" styleClass="menu-item" stylesheets="@style.css" text="Pacotes"/>
+        <Label layoutX="18.0" layoutY="77.0" prefHeight="78.0" prefWidth="290.0"
+               style="-fx-background-color: #163B49;" styleClass="menu-item" stylesheets="@style.css"
+               text="Clientes"/>
+        <Label layoutX="18.0" layoutY="188.0" prefHeight="78.0" prefWidth="290.0" styleClass="menu-item"
+               stylesheets="@style.css" text="Itinerários"/>
+        <Label layoutX="18.0" layoutY="299.0" prefHeight="78.0" prefWidth="290.0" styleClass="menu-item"
+               stylesheets="@style.css" text="Pagamentos"/>
+        <Label layoutX="18.0" layoutY="410.0" prefHeight="78.0" prefWidth="274.0" styleClass="menu-item"
+               stylesheets="@style.css" text="Relatórios"/>
+    </VBox>
+    <Label layoutX="326.0" layoutY="166.0" prefHeight="33.0" prefWidth="905.0" style="-fx-background-color: #13526B;"
+           styleClass="headerCadastro" stylesheets="@style.css" text="Listar Clientes">
+        <padding>
+          <Insets left="50.0"/>
+        </padding>
+    </Label>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#13526B" height="90.0" stroke="#13526b" strokeType="INSIDE"
+               width="1280.0"/>
+    <Label alignment="CENTER" prefHeight="90.0" prefWidth="290.0" styleClass="app-title" stylesheets="@style.css"
+           text="PROTO.ALPHA"/>
+    <Button fx:id="botaoVoltar" layoutX="1216.0" layoutY="101.0" mnemonicParsing="false" onAction="#onVoltarButtonClick"
+            prefHeight="50.0" prefWidth="50.0" styleClass="botao-redondo" stylesheets="@style.css" text="&lt;-"/>
+    <TableView fx:id="tableView" layoutX="326.0" layoutY="220.0" prefHeight="389.0" prefWidth="905.0">
+      <columns>
+          <TableColumn fx:id="coluna_cpf" prefWidth="69.0" text="cpf"/>
+          <TableColumn fx:id="coluna_nome" prefWidth="231.0" text="nome"/>
+          <TableColumn fx:id="coluna_email" prefWidth="147.0" text="e-mail"/>
+          <TableColumn fx:id="coluna_fone" prefWidth="116.0" text="telefone"/>
+          <TableColumn fx:id="coluna_historico" prefWidth="187.0" text="histórico de viagens"/>
+          <TableColumn fx:id="coluna_preferencias" prefWidth="154.0" text="preferências"/>
+      </columns>
+    </TableView>
 </AnchorPane>
