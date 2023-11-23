@@ -4,20 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e8b3be-9c65-4a3a-b25e-bff793968bd2" name="Changes" comment="Adicionar tela de listar clientes e adicionar campo cpf ao modelo de cliente">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/AtualizacaoClientesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/RemocaoClientesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/atualizacaoClientes.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/remocaoClientes.fxml" afterDir="false" />
+    <list default="true" id="08e8b3be-9c65-4a3a-b25e-bff793968bd2" name="Changes" comment="Adicionar telas e controllers de remoção de Cliente e atualização de dados de Cliente">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/AtualizacaoPacoteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/CadastroPacoteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/PacotesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/dao/PacoteDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/dao/ReservaDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/model/PacoteTuristico.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/model/Reserva.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/service/PacoteService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/service/ReservaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/atualizacaoPacote.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/cadastroPacote.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/pacotes.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/teste.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/CadastroClientesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/CadastroClientesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/ClientesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/ClientesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/ListarClientesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/ListarClientesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/model/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/model/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/atualizacaoClientes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/atualizacaoClientes.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/cadastroClientes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/cadastroClientes.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/clientes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/clientes.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/listarClientes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/listarClientes.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/remocaoClientes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/remocaoClientes.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/home.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +106,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699910112048</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Adicionar telas e controllers de remoção de Cliente e atualização de dados de Cliente">
+      <option name="closed" value="true" />
+      <created>1700165672832</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1700165672832</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -116,6 +132,7 @@
     <MESSAGE value="Adicionar código inicial das primeiras classes" />
     <MESSAGE value="Adicionar botões de voltar a tela de Cliente e de Cadastro de Cliente" />
     <MESSAGE value="Adicionar tela de listar clientes e adicionar campo cpf ao modelo de cliente" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionar tela de listar clientes e adicionar campo cpf ao modelo de cliente" />
+    <MESSAGE value="Adicionar telas e controllers de remoção de Cliente e atualização de dados de Cliente" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionar telas e controllers de remoção de Cliente e atualização de dados de Cliente" />
   </component>
 </project>
