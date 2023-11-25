@@ -31,4 +31,9 @@ public class ClienteService {
     public List<Cliente> listarClientes() {
         return clienteDAO.listarClientes();
     }
+
+    public boolean verificarClienteExistente(String cpf) {
+        Cliente cliente = clienteDAO.buscarCliente(cpf);
+        return cliente != null;
+    }
 }

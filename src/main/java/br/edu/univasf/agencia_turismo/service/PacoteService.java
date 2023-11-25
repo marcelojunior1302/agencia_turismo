@@ -32,4 +32,13 @@ public class PacoteService {
     public List<PacoteTuristico> listarPacotes() {
         return pacoteDAO.listarPacotes();
     }
+    public boolean verificarPacoteExistente(int codigoPacote) {
+        PacoteTuristico pacote = pacoteDAO.buscarPacote(codigoPacote);
+        return pacote != null;
+    }
+    public boolean verificarVagasDisponiveis(int codigoPacote, int quantidadeVagasSolicitadas) {
+        PacoteTuristico pacote = pacoteDAO.buscarPacote(codigoPacote);
+        return pacote != null && pacote.getQuantidadeVagas() >= quantidadeVagasSolicitadas;
+    }
+
 }

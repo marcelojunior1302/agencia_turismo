@@ -1,12 +1,13 @@
 package br.edu.univasf.agencia_turismo.model;
 
-import java.util.Date;
+
+import java.sql.Timestamp;
 
 public class Reserva {
     private int idReserva;
     private String cpfCliente;
     private int codigoPacote;
-    private Date dataReserva;
+    private Timestamp dataReserva;
     private int quantidadeVagasSolicitadas;
 
     // Construtores
@@ -14,7 +15,7 @@ public class Reserva {
     public Reserva() {
     }
 
-    public Reserva(int idReserva, String cpfCliente, int codigoPacote, Date dataReserva, int quantidadeVagasSolicitadas) {
+    public Reserva(int idReserva, String cpfCliente, int codigoPacote, Timestamp dataReserva, int quantidadeVagasSolicitadas) {
         this.idReserva = idReserva;
         this.cpfCliente = cpfCliente;
         this.codigoPacote = codigoPacote;
@@ -48,11 +49,11 @@ public class Reserva {
         this.codigoPacote = codigoPacote;
     }
 
-    public Date getDataReserva() {
+    public Timestamp getDataReserva() {
         return dataReserva;
     }
 
-    public void setDataReserva(Date dataReserva) {
+    public void setDataReserva(Timestamp dataReserva) {
         this.dataReserva = dataReserva;
     }
 

@@ -20,6 +20,12 @@ public class PacotesController {
     @FXML
     private Button atualizarDadosPacoteButton;
     @FXML
+    private Button fazerReservaButton;
+    @FXML
+    private Button cancelarReservaButton;
+    @FXML
+    private Button buscarReservaButton;
+    @FXML
     private Button botaoVoltar;
 
     @FXML
@@ -84,7 +90,16 @@ public class PacotesController {
         }
     }
 
-    public void onFazerReservaButtonClick(ActionEvent actionEvent) {
+    public void onFazerReservaButtonClick() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("fazerReserva.fxml"));
+            Parent fazerReserva = loader.load();
+
+            Scene scene = fazerReservaButton.getScene();
+            scene.setRoot(fazerReserva);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void onCancelarReservaButtonClick(ActionEvent actionEvent) {

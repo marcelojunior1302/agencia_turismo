@@ -19,7 +19,7 @@ public class ReservaDAO {
         try (PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, reserva.getCpfCliente());
             stmt.setInt(2, reserva.getCodigoPacote());
-            stmt.setDate(3, new java.sql.Date(reserva.getDataReserva().getTime()));
+            stmt.setTimestamp(3, reserva.getDataReserva());
             stmt.setInt(4, reserva.getQuantidadeVagasSolicitadas());
 
             stmt.executeUpdate();
@@ -41,7 +41,7 @@ public class ReservaDAO {
                     reserva.setIdReserva(rs.getInt("id_reserva"));
                     reserva.setCpfCliente(rs.getString("cpf_cliente"));
                     reserva.setCodigoPacote(rs.getInt("codigo_pacote"));
-                    reserva.setDataReserva(rs.getDate("data_reserva"));
+                    reserva.setDataReserva(rs.getTimestamp("data_reserva"));
                     reserva.setQuantidadeVagasSolicitadas(rs.getInt("quantidade_vagas_solicitadas"));
 
                     return reserva;
@@ -62,7 +62,7 @@ public class ReservaDAO {
         try (PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, reserva.getCpfCliente());
             stmt.setInt(2, reserva.getCodigoPacote());
-            stmt.setDate(3, new java.sql.Date(reserva.getDataReserva().getTime()));
+            stmt.setTimestamp(3, reserva.getDataReserva());
             stmt.setInt(4, reserva.getQuantidadeVagasSolicitadas());
             stmt.setInt(5, reserva.getIdReserva());
 
@@ -97,7 +97,7 @@ public class ReservaDAO {
                     reserva.setIdReserva(rs.getInt("id_reserva"));
                     reserva.setCpfCliente(rs.getString("cpf_cliente"));
                     reserva.setCodigoPacote(rs.getInt("codigo_pacote"));
-                    reserva.setDataReserva(rs.getDate("data_reserva"));
+                    reserva.setDataReserva(rs.getTimestamp("data_reserva"));
                     reserva.setQuantidadeVagasSolicitadas(rs.getInt("quantidade_vagas_solicitadas"));
 
                     reservas.add(reserva);
