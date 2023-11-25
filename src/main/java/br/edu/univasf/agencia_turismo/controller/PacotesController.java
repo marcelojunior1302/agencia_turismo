@@ -38,7 +38,7 @@ public class PacotesController {
     @FXML
     private void onListarPacotesButtonClick() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("listarClientes.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("listarPacotes.fxml"));
             Parent listarPacotes = loader.load();
 
             Scene scene = listarPacotesButton.getScene();
@@ -63,7 +63,7 @@ public class PacotesController {
     private void onRemoverPacoteButtonClick() {
 
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("remocaoClientes.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("remocaoPacote.fxml"));
             Parent removerPacote = loader.load();
 
             Scene scene = removerPacoteButton.getScene();
