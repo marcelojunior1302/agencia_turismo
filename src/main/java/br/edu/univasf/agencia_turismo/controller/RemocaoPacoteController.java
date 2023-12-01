@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 import java.sql.Date;
@@ -15,6 +16,9 @@ import java.time.ZoneId;
 import java.util.Optional;
 
 public class RemocaoPacoteController {
+
+    @FXML
+    private AnchorPane layoutPrincipal;
 
     @FXML
     private Button botaoVoltar;
@@ -138,6 +142,19 @@ public class RemocaoPacoteController {
 
         // Retornar verdadeiro se o usuário clicar em "Sim", falso caso contrário
         return result.isPresent() && result.get() == simButton;
+    }
+
+    @FXML
+    private void mostraInterfaceClientes() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("clientes.fxml"));
+            Parent clientesInterface = loader.load();
+
+            Scene scene = layoutPrincipal.getScene();
+            scene.setRoot(clientesInterface);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 

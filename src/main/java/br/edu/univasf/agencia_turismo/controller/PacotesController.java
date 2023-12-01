@@ -6,11 +6,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
 public class PacotesController {
 
+    @FXML
+    private AnchorPane layoutPrincipal;
     @FXML
     private Button removerPacoteButton;
     @FXML
@@ -24,7 +27,7 @@ public class PacotesController {
     @FXML
     private Button cancelarReservaButton;
     @FXML
-    private Button buscarReservaButton;
+    private Button listarReservaButton;
     @FXML
     private Button botaoVoltar;
 
@@ -105,6 +108,29 @@ public class PacotesController {
     public void onCancelarReservaButtonClick(ActionEvent actionEvent) {
     }
 
-    public void onBuscarReservaButtonClick(ActionEvent actionEvent) {
+    public void onListarReservaButtonClick() {
+
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("listarReservas.fxml"));
+            Parent listarReservas = loader.load();
+
+            Scene scene = listarReservaButton.getScene();
+            scene.setRoot(listarReservas);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void mostraInterfaceClientes() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("clientes.fxml"));
+            Parent clientesInterface = loader.load();
+
+            Scene scene = layoutPrincipal.getScene();
+            scene.setRoot(clientesInterface);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

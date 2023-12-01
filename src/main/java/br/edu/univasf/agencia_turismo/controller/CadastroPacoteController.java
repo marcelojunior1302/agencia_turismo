@@ -10,11 +10,16 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import br.edu.univasf.agencia_turismo.model.PacoteTuristico;
 import br.edu.univasf.agencia_turismo.service.PacoteService;
+import javafx.scene.layout.AnchorPane;
+
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.Date;
 
 public class CadastroPacoteController {
+
+    @FXML
+    private AnchorPane layoutPrincipal;
 
     @FXML
     private TextField codigoPacoteField;
@@ -95,5 +100,18 @@ public class CadastroPacoteController {
         alert.setHeaderText(null);
         alert.setContentText("Certifique-se de preencher os campos corretamente.");
         alert.showAndWait();
+    }
+
+    @FXML
+    private void mostraInterfaceClientes() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("clientes.fxml"));
+            Parent clientesInterface = loader.load();
+
+            Scene scene = layoutPrincipal.getScene();
+            scene.setRoot(clientesInterface);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

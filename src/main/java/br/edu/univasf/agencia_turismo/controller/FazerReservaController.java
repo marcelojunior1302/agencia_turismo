@@ -11,12 +11,16 @@ import javafx.scene.control.TextField;
 import br.edu.univasf.agencia_turismo.model.Reserva;
 import br.edu.univasf.agencia_turismo.service.ReservaService;
 import br.edu.univasf.agencia_turismo.service.PacoteService;
+import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 import java.sql.Timestamp;
 import java.util.Date;
 
 public class FazerReservaController {
+
+    @FXML
+    private AnchorPane layoutPrincipal;
 
     @FXML
     private TextField cpfField;
@@ -101,4 +105,17 @@ public class FazerReservaController {
         alert.setContentText(mensagem);
         alert.showAndWait();
     }
+    @FXML
+    private void mostraInterfaceClientes() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("clientes.fxml"));
+            Parent clientesInterface = loader.load();
+
+            Scene scene = layoutPrincipal.getScene();
+            scene.setRoot(clientesInterface);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

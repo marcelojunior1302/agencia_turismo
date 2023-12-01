@@ -9,6 +9,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+
 import java.io.IOException;
 
 public class AtualizacaoClientesController {
@@ -28,6 +30,9 @@ public class AtualizacaoClientesController {
     @FXML
     private Button botaoVoltar;
     private ClienteDAO clienteDAO; //
+
+    @FXML
+    private AnchorPane layoutPrincipal;
 
     public void initialize() {
         this.clienteDAO = new ClienteDAO();
@@ -99,4 +104,18 @@ public class AtualizacaoClientesController {
         historicoField.clear();
         preferenciasField.clear();
     }
+
+    @FXML
+    private void mostraInterfacePacotes() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("pacotes.fxml"));
+            Parent pacotesInterface = loader.load();
+
+            Scene scene = layoutPrincipal.getScene();
+            scene.setRoot(pacotesInterface);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

@@ -9,9 +9,14 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+
 import java.io.IOException;
 
 public class RemocaoClientesController {
+
+    @FXML
+    private AnchorPane layoutPrincipal;
 
     @FXML
     private TextField cpfField;
@@ -108,5 +113,18 @@ public class RemocaoClientesController {
         telefoneField.clear();
         historicoField.clear();
         preferenciasField.clear();
+    }
+
+    @FXML
+    private void mostraInterfacePacotes() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("pacotes.fxml"));
+            Parent pacotesInterface = loader.load();
+
+            Scene scene = layoutPrincipal.getScene();
+            scene.setRoot(pacotesInterface);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

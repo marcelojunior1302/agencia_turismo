@@ -10,10 +10,15 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
+
 import java.io.IOException;
 import java.util.List;
 
 public class ListarClientesController {
+
+    @FXML
+    private AnchorPane layoutPrincipal;
 
     @FXML
     private Button botaoVoltar;
@@ -62,6 +67,19 @@ public class ListarClientesController {
             Parent home = loader.load();
             Scene scene = botaoVoltar.getScene();
             scene.setRoot(home);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void mostraInterfacePacotes() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("pacotes.fxml"));
+            Parent pacotesInterface = loader.load();
+
+            Scene scene = layoutPrincipal.getScene();
+            scene.setRoot(pacotesInterface);
         } catch (IOException e) {
             e.printStackTrace();
         }

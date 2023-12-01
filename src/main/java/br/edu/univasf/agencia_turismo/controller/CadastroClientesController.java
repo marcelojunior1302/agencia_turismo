@@ -10,9 +10,14 @@ import br.edu.univasf.agencia_turismo.model.Cliente;
 import br.edu.univasf.agencia_turismo.service.ClienteService;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.layout.AnchorPane;
+
 import java.io.IOException;
 
 public class CadastroClientesController {
+
+    @FXML
+    private AnchorPane layoutPrincipal;
 
     @FXML
     private TextField cpfField;
@@ -75,5 +80,18 @@ public class CadastroClientesController {
         alert.setHeaderText(null);
         alert.setContentText("Cadastro realizado com sucesso!");
         alert.showAndWait();
+    }
+
+    @FXML
+    private void mostraInterfacePacotes() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("pacotes.fxml"));
+            Parent pacotesInterface = loader.load();
+
+            Scene scene = layoutPrincipal.getScene();
+            scene.setRoot(pacotesInterface);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

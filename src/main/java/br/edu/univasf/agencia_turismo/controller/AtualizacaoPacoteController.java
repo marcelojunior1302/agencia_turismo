@@ -10,6 +10,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.sql.Date;
@@ -17,6 +19,9 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 
 public class AtualizacaoPacoteController {
+
+    @FXML
+    private AnchorPane layoutPrincipal;
 
     @FXML
     private TextField codigoPacoteField;
@@ -122,5 +127,18 @@ public class AtualizacaoPacoteController {
         destinoField.clear();
         dataPicker.setValue(null);
         vagasField.clear();
+    }
+
+    @FXML
+    private void mostraInterfaceClientes() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("clientes.fxml"));
+            Parent clientesInterface = loader.load();
+
+            Scene scene = layoutPrincipal.getScene();
+            scene.setRoot(clientesInterface);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

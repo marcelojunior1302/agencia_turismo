@@ -3,12 +3,13 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane id="layoutPrincipal" fx:id="layoutPrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="main-pane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.univasf.agencia_turismo.controller.FazerReservaController">
+<AnchorPane id="layoutPrincipal" fx:id="layoutPrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="main-pane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.univasf.agencia_turismo.controller.ListarReservasController">
     <VBox layoutY="90.0" prefHeight="632.0" prefWidth="256.0" styleClass="menu">
         <Label prefHeight="44.0" text="espaçamento" visible="false" />
         <Label prefHeight="78.0" prefWidth="290.0" style="-fx-background-color: #163B49;" styleClass="menu-item" stylesheets="@style.css" text="Pacotes e Reservas" />
@@ -17,19 +18,21 @@
         <Label layoutX="18.0" layoutY="299.0" prefHeight="78.0" prefWidth="290.0" styleClass="menu-item" stylesheets="@style.css" text="Pagamentos" />
         <Label layoutX="18.0" layoutY="410.0" prefHeight="78.0" prefWidth="274.0" styleClass="menu-item" stylesheets="@style.css" text="Relatórios" />
     </VBox>
-    <Label layoutX="326.0" layoutY="166.0" prefHeight="33.0" prefWidth="905.0" style="-fx-background-color: #13526B;" styleClass="headerCadastro" stylesheets="@style.css" text="Fazer Reserva">
+    <Label layoutX="326.0" layoutY="166.0" prefHeight="33.0" prefWidth="905.0" style="-fx-background-color: #13526B;" styleClass="headerCadastro" stylesheets="@style.css" text="Listar Reservas">
         <padding>
           <Insets left="50.0" />
         </padding>
     </Label>
-    <Label layoutX="326.0" layoutY="237.0" prefHeight="21.0" prefWidth="140.0" styleClass="labelNomeCompleto" stylesheets="@style.css" text="CPF do Cliente:" />
-    <TextField fx:id="cpfField" layoutX="326.0" layoutY="258.0" prefHeight="31.0" prefWidth="216.0" />
-    <TextField fx:id="codigoPacoteField" layoutX="326.0" layoutY="332.0" prefHeight="31.0" prefWidth="216.0" />
     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#13526B" height="90.0" stroke="#13526b" strokeType="INSIDE" width="1280.0" />
     <Label alignment="CENTER" prefHeight="90.0" prefWidth="290.0" styleClass="app-title" stylesheets="@style.css" text="SGAT" />
-    <Button layoutX="1006.0" layoutY="636.0" mnemonicParsing="false" onAction="#confirmarReserva" prefHeight="33.0" prefWidth="225.0" styleClass="clientesButton" stylesheets="@style.css" text="Confirmar Reserva" />
     <Button fx:id="botaoVoltar" layoutX="1216.0" layoutY="101.0" mnemonicParsing="false" onAction="#onVoltarButtonClick" prefHeight="50.0" prefWidth="50.0" styleClass="botao-redondo" stylesheets="@style.css" text="&lt;-" />
-    <Label layoutX="326.0" layoutY="311.0" prefHeight="21.0" prefWidth="153.0" styleClass="labelNomeCompleto" stylesheets="@style.css" text="Código do Pacote:" />
-    <TextField fx:id="vagasField" layoutX="326.0" layoutY="403.0" prefHeight="31.0" prefWidth="216.0" />
-   <Label layoutX="326.0" layoutY="381.0" prefHeight="21.0" prefWidth="167.0" styleClass="labelNomeCompleto" stylesheets="@style.css" text="Quantidade de vagas:" />
+   <TableView fx:id="tableView" layoutX="326.0" layoutY="236.0" prefHeight="429.0" prefWidth="708.0">
+     <columns>
+       <TableColumn fx:id="coluna_id" prefWidth="108.0" text="ID da reserva" />
+       <TableColumn fx:id="coluna_cpf" minWidth="8.0" prefWidth="144.0" text="CPF" />
+         <TableColumn fx:id="coluna_pacote" prefWidth="123.0" text="Código do pacote" />
+         <TableColumn fx:id="coluna_data" prefWidth="179.0" text="Data da reserva" />
+         <TableColumn fx:id="coluna_vagas" prefWidth="153.0" text="Vagas solicitadas" />
+     </columns>
+   </TableView>
 </AnchorPane>

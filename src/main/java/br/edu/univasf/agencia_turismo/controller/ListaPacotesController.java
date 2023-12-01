@@ -12,12 +12,17 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
+import javafx.scene.layout.AnchorPane;
+
 import java.io.IOException;
 import java.sql.Date;
 import java.util.List;
 
 
 public class ListaPacotesController {
+
+    @FXML
+    private AnchorPane layoutPrincipal;
 
     @FXML
     private Button botaoVoltar;
@@ -71,6 +76,19 @@ public class ListaPacotesController {
             Parent home = loader.load();
             Scene scene = botaoVoltar.getScene();
             scene.setRoot(home);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void mostraInterfaceClientes() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("clientes.fxml"));
+            Parent clientesInterface = loader.load();
+
+            Scene scene = layoutPrincipal.getScene();
+            scene.setRoot(clientesInterface);
         } catch (IOException e) {
             e.printStackTrace();
         }

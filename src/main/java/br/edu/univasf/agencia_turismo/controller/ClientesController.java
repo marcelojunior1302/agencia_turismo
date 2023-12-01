@@ -5,9 +5,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.AnchorPane;
+
 import java.io.IOException;
 
 public class ClientesController {
+
+    @FXML
+    private AnchorPane layoutPrincipal;
 
     @FXML
     private Button removerClienteButton;
@@ -77,6 +82,19 @@ public class ClientesController {
             Parent clientes = loader.load();
             Scene scene = botaoVoltar.getScene();
             scene.setRoot(clientes);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void mostraInterfacePacotes() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("pacotes.fxml"));
+            Parent pacotesInterface = loader.load();
+
+            Scene scene = layoutPrincipal.getScene();
+            scene.setRoot(pacotesInterface);
         } catch (IOException e) {
             e.printStackTrace();
         }
