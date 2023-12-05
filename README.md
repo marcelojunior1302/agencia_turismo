@@ -94,7 +94,7 @@ CREATE TABLE reserva (
 - Acesse: `agencia_turismo` > `Menu de contexto` > `Refresh...`
 - Se desejar, confira as tabelas em `agencia_turismo` > `Schemas` > `Tables`
 
-### Parte 4: download e eecução do projeto
+### Parte 4: download e execução do projeto
 
 - Faça o `git clone` do repositório
 - Abra a IDE IntelliJ e acesse: `Arquivo` > `Open...` > `Selecionar pasta do projeto`
@@ -106,7 +106,7 @@ CREATE TABLE reserva (
 
 ### Como alterar a porta do PostgreSQL no Windows?
 - Edite a porta em `C:\Program Files\PostgreSQL\<version>\data`
-- Execute `win + R` > `services.msc` > `postgresql-x64-16` > `iniciar/reiniciar serviço`
+- Execute `win + R` > `services.msc` > `postgresql-x<arch>-<version>` > `iniciar/reiniciar serviço`
 - Certifique-se de que a porta no arquivo esteja igual à porta no servidor do pgAdmin
 - Clique com o botão direito no servidor > Conectar > Digitar a senha
 
