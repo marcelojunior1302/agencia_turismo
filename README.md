@@ -2,10 +2,17 @@
 
 ## 📄 Sumário
 
+[1. O que é o projeto?](#o-que-e-o-projeto)
+[2. Quais são os requisitos de software?](#requisitos)
+[3. Como executar o projeto na minha máquina?](#executar)
+[4. O que mais pode ser necessário?](#notas)
+
+<a id="o-que-e-o-projeto"></a>
 ## ✨ O que é o projeto?
 
 O SGAT é um sistema para gestão de agências de turismo, desenvolvido para a disciplina de Engenharia de Software II.
 
+<a id="requisitos"></a>
 ## ✅ Quais são os requisitos de software?
 
 - IntelliJ IDEA 2023.2.2 (build 232.9921.47)
@@ -23,6 +30,7 @@ O SGAT é um sistema para gestão de agências de turismo, desenvolvido para a d
 - O SceneBuilder só é necessário se você quiser uma ferramenta gráfica para edição das views
 - O pgAdmin 4 pode ser instalado por meio do mesmo menu de instalação do PostgreSQL
 
+<a id="executar"></a>
 ## ⚡ Como executar o projeto na minha máquina?
 
 Se você já cumpriu os requisitos de instalação, siga os passos abaixo:
@@ -84,7 +92,8 @@ CREATE TABLE reserva (
 - Abra o arquivo `src\main\java\br\edu\univasf\agencia_turismo\Main.java`
 - Execute a aplicação usando o botão de play ou `Shift + F10`
 
-## Outras notas
+<a id="notas"></a>
+## 📝 O que mais pode ser necessário?
 
 ### Como alterar a porta do PostgreSQL no Windows?
 - Edite a porta em `C:\Program Files\PostgreSQL\<version>\data`
