@@ -4,32 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e8b3be-9c65-4a3a-b25e-bff793968bd2" name="Changes" comment="Adicionar tela e lógica de fazer reserva">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/ListarReservasController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/listarReservas.fxml" afterDir="false" />
+    <list default="true" id="08e8b3be-9c65-4a3a-b25e-bff793968bd2" name="Changes" comment="Adicionar lógica e tela de Listar Reservas, Adicionar transição entre os menus em todas as telas, Alterar Nome, Adicionar pasta de imagens">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/AtualizacaoClientesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/AtualizacaoClientesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/AtualizacaoPacoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/AtualizacaoPacoteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/CadastroClientesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/CadastroClientesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/CadastroPacoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/CadastroPacoteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/ClientesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/ClientesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/FazerReservaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/FazerReservaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/ListaPacotesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/ListaPacotesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/ListarClientesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/ListarClientesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/PacotesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/PacotesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/RemocaoClientesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/RemocaoClientesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/RemocaoPacoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/RemocaoPacoteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/atualizacaoClientes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/atualizacaoClientes.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/atualizacaoPacote.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/atualizacaoPacote.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/cadastroClientes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/cadastroClientes.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/cadastroPacote.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/cadastroPacote.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/clientes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/clientes.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/fazerReserva.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/fazerReserva.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/listarClientes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/listarClientes.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/listarPacotes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/listarPacotes.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/pacotes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/pacotes.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/remocaoClientes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/remocaoClientes.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/remocaoPacote.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/remocaoPacote.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/home.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -145,7 +121,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700949148826</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Adicionar lógica e tela de Listar Reservas, Adicionar transição entre os menus em todas as telas, Alterar Nome, Adicionar pasta de imagens">
+      <option name="closed" value="true" />
+      <created>1701445141161</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1701445141161</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -167,6 +151,8 @@
     <MESSAGE value="Adicionar lógica dos modelos, DAO e services de PacoteTuristico e Reserva; Adicionar telas de cadastro e atualização de Pacotes" />
     <MESSAGE value="Adicionar telas e lógica dos Controllers de listar pacotes e remover pacotes" />
     <MESSAGE value="Adicionar tela e lógica de fazer reserva" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionar tela e lógica de fazer reserva" />
+    <MESSAGE value="Adicionar lógica e tela de Listar Reservas, Adicionar transição entre os menus em todas as telas, Alterar Nome" />
+    <MESSAGE value="Adicionar lógica e tela de Listar Reservas, Adicionar transição entre os menus em todas as telas, Alterar Nome, Adicionar pasta de imagens" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionar lógica e tela de Listar Reservas, Adicionar transição entre os menus em todas as telas, Alterar Nome, Adicionar pasta de imagens" />
   </component>
 </project>
