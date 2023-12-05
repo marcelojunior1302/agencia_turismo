@@ -13,7 +13,13 @@
 <a id="o-que-e-o-projeto"></a>
 ## ✨ O que é o projeto?
 
-O SGAT é um sistema para gestão de agências de turismo, desenvolvido para a disciplina de Engenharia de Software II.
+O SGAT é um sistema para gestão de agências de turismo, desenvolvido para a disciplina de Engenharia de Software II. O grupo do projeto é composto por:
+
+- Edeilton Oliveira
+- Jonathan Pablo
+- Marcelo Junior
+- Túlio Jad
+- Vinicius Lemos
 
 <a id="requisitos"></a>
 ## ✅ Quais são os requisitos de software?
@@ -36,7 +42,7 @@ O SGAT é um sistema para gestão de agências de turismo, desenvolvido para a d
 <a id="executar"></a>
 ## ⚡ Como executar o projeto na minha máquina?
 
-Se você já cumpriu os requisitos de instalação, siga os passos abaixo:
+Se você já cumpriu os requisitos de software, siga os passos abaixo:
 
 ### Parte 1: instalação do PostgreSQL
 
