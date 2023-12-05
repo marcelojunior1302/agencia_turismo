@@ -3,8 +3,11 @@
 ## 📄 Sumário
 
 [1. O que é o projeto?](#o-que-e-o-projeto)
+
 [2. Quais são os requisitos de software?](#requisitos)
+
 [3. Como executar o projeto na minha máquina?](#executar)
+
 [4. O que mais pode ser necessário?](#notas)
 
 <a id="o-que-e-o-projeto"></a>
