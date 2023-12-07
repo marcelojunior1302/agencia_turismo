@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Rectangle?>
@@ -12,14 +16,62 @@
     <Label alignment="CENTER" prefHeight="90.0" prefWidth="290.0" styleClass="app-title" stylesheets="@style.css" text="SGAT" />
     <VBox layoutY="90.0" prefHeight="632.0" prefWidth="256.0" styleClass="menu">
         <Label prefHeight="44.0" text="espaçamento" visible="false" />
-        <Label onMouseClicked="#mostraInterfacePacotes" prefHeight="78.0" prefWidth="290.0" styleClass="menu-item" stylesheets="@style.css" text="Pacotes e Reservas" />
-        <Label layoutX="18.0" layoutY="77.0" prefHeight="78.0" prefWidth="290.0" style="-fx-background-color: #163B49;" styleClass="menu-item" stylesheets="@style.css" text="Clientes" />
-        <Label layoutX="18.0" layoutY="188.0" prefHeight="78.0" prefWidth="290.0" styleClass="menu-item" stylesheets="@style.css" text="Itinerários" />
-        <Label layoutX="18.0" layoutY="299.0" prefHeight="78.0" prefWidth="290.0" styleClass="menu-item" stylesheets="@style.css" text="Pagamentos" />
-        <Label layoutX="18.0" layoutY="410.0" prefHeight="78.0" prefWidth="274.0" styleClass="menu-item" stylesheets="@style.css" text="Relatórios" />
+        <Label contentDisplay="RIGHT" onMouseClicked="#mostraInterfacePacotes" prefHeight="90.0" prefWidth="274.0" styleClass="menu-item" stylesheets="@style.css" text="Pacotes e&#10;Reservas     ">
+         <graphic>
+            <ImageView fitHeight="55.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8-handcart-96.png" />
+               </image>
+            </ImageView>
+         </graphic></Label>
+        <Label contentDisplay="RIGHT" layoutX="18.0" layoutY="77.0" prefHeight="78.0" prefWidth="290.0" style="-fx-background-color: #163B49;" styleClass="menu-item" stylesheets="@style.css" text="Clientes       ">
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8-people-96.png" />
+               </image>
+            </ImageView>
+         </graphic></Label>
+        <Label contentDisplay="RIGHT" layoutX="18.0" layoutY="188.0" prefHeight="78.0" prefWidth="290.0" styleClass="menu-item" stylesheets="@style.css" text="Itinerários    ">
+         <graphic>
+            <ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8-track-order-96.png" />
+               </image>
+            </ImageView>
+         </graphic></Label>
+        <Label contentDisplay="RIGHT" layoutX="18.0" layoutY="299.0" prefHeight="78.0" prefWidth="290.0" styleClass="menu-item" stylesheets="@style.css" text="Pagamentos">
+         <graphic>
+            <ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8-cash-96.png" />
+               </image>
+            </ImageView>
+         </graphic></Label>
+        <Label contentDisplay="RIGHT" layoutX="18.0" layoutY="410.0" prefHeight="78.0" prefWidth="274.0" styleClass="menu-item" stylesheets="@style.css" text="Relatórios    ">
+         <graphic>
+            <ImageView fitHeight="47.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8-brief-96.png" />
+               </image>
+            </ImageView>
+         </graphic></Label>
     </VBox>
     <Button fx:id="atualizarDadosButton" layoutX="351.0" layoutY="243.0" mnemonicParsing="false" onAction="#onAtualizarDadosButtonClick" prefHeight="33.0" prefWidth="225.0" styleClass="clientesButton" stylesheets="@style.css" text="Atualizar Dados" />
     <Button fx:id="listarClientesButton" layoutX="351.0" layoutY="323.0" mnemonicParsing="false" onAction="#onListarClientesButtonClick" prefHeight="33.0" prefWidth="225.0" styleClass="clientesButton" stylesheets="@style.css" text="Listar Clientes" />
     <Button fx:id="removerClienteButton" layoutX="351.0" layoutY="403.0" mnemonicParsing="false" onAction="#onRemoverClienteButtonClick" prefHeight="33.0" prefWidth="225.0" styleClass="clientesButton" stylesheets="@style.css" text="Remover Cliente" />
-    <Button fx:id="botaoVoltar" layoutX="1216.0" layoutY="101.0" mnemonicParsing="false" onAction="#onVoltarButtonClick" prefHeight="50.0" prefWidth="50.0" styleClass="botao-redondo" stylesheets="@style.css" text="&lt;-" />
+   <Group layoutX="1226.0" layoutY="110.0">
+      <children>
+         <Button fx:id="botaoVoltar" ellipsisString="" mnemonicParsing="false" onAction="#onVoltarButtonClick" prefHeight="50.0" prefWidth="50.0" styleClass="botao-redondo" stylesheets="@style.css">
+            <cursor>
+               <Cursor fx:constant="DEFAULT" />
+            </cursor>
+         </Button>
+         <ImageView disable="true" fitHeight="56.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" styleClass="botao-redondo">
+            <image>
+               <Image url="@../images/icons8-go-back-96blue.png" />
+            </image>
+         </ImageView>
+      </children>
+   </Group>
 </AnchorPane>

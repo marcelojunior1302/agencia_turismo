@@ -13,14 +13,49 @@
     <Label alignment="CENTER" prefHeight="90.0" prefWidth="290.0" styleClass="app-title" stylesheets="@style.css" />
     <VBox layoutY="90.0" prefHeight="632.0" prefWidth="256.0" styleClass="menu">
         <Label prefHeight="44.0" text="espaçamento" visible="false" />
-        <Label onMouseClicked="#mostraInterfacePacotes" prefHeight="78.0" prefWidth="290.0" style="-fx-font-family: 'Nova Square';" styleClass="menu-item" stylesheets="@style.css" text="Pacotes e Reservas">
+        <Label contentDisplay="RIGHT" onMouseClicked="#mostraInterfacePacotes" prefHeight="90.0" prefWidth="274.0" style="-fx-font-family: 'Nova Square';" styleClass="menu-item" stylesheets="@style.css" text="Pacotes e&#10;Reservas     ">
          <font>
             <Font name="Courier New" size="12.0" />
-         </font></Label>
-        <Label layoutX="18.0" layoutY="77.0" onMouseClicked="#mostraInterfaceClientes" prefHeight="78.0" prefWidth="290.0" styleClass="menu-item" stylesheets="@style.css" text="Clientes" />
-        <Label layoutX="18.0" layoutY="188.0" prefHeight="78.0" prefWidth="290.0" styleClass="menu-item" stylesheets="@style.css" text="Itinerários" />
-        <Label layoutX="18.0" layoutY="299.0" prefHeight="78.0" prefWidth="290.0" styleClass="menu-item" stylesheets="@style.css" text="Pagamentos" />
-        <Label layoutX="18.0" layoutY="410.0" prefHeight="78.0" prefWidth="274.0" styleClass="menu-item" stylesheets="@style.css" text="Relatórios" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="55.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-handcart-96.png" />
+               </image>
+            </ImageView>
+         </graphic></Label>
+        <Label contentDisplay="RIGHT" layoutX="18.0" layoutY="77.0" onMouseClicked="#mostraInterfaceClientes" prefHeight="78.0" prefWidth="290.0" styleClass="menu-item" stylesheets="@style.css" text="Clientes       ">
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-people-96.png" />
+               </image>
+            </ImageView>
+         </graphic></Label>
+        <Label contentDisplay="RIGHT" layoutX="18.0" layoutY="188.0" prefHeight="78.0" prefWidth="290.0" styleClass="menu-item" stylesheets="@style.css" text="Itinerários    ">
+         <graphic>
+            <ImageView fitHeight="55.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-track-order-96.png" />
+               </image>
+            </ImageView>
+         </graphic></Label>
+        <Label contentDisplay="RIGHT" layoutX="18.0" layoutY="299.0" prefHeight="78.0" prefWidth="290.0" styleClass="menu-item" stylesheets="@style.css" text="Pagamentos">
+         <graphic>
+            <ImageView fitHeight="55.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-cash-96.png" />
+               </image>
+            </ImageView>
+         </graphic></Label>
+        <Label contentDisplay="RIGHT" layoutX="18.0" layoutY="410.0" prefHeight="78.0" prefWidth="274.0" styleClass="menu-item" stylesheets="@style.css" text="Relatórios    " textAlignment="CENTER">
+         <graphic>
+            <ImageView fitHeight="47.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-brief-96.png" />
+               </image>
+            </ImageView>
+         </graphic></Label>
     </VBox>
    <ImageView fitHeight="473.0" fitWidth="663.0" layoutX="461.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true">
       <image>

@@ -73,7 +73,7 @@
 }
 
 .botao-redondo {
-    -fx-background-color: #13526B; /* Cor de fundo do botão */
+    -fx-background-color: #EAF0F6; /* Cor de fundo do botão */
     -fx-text-fill: #FFFFFF; /* Cor do texto no botão */
     -fx-background-radius: 50em; /* Torna o botão redondo */
     -fx-min-width: 50px; /* Largura mínima igual à altura para torná-lo redondo */
@@ -82,7 +82,7 @@
     -fx-font-weight: bold; /* Define a fonte em negrito */
 }
 
-.botao-redondo:hover {
-    -fx-background-color: #163B49; /* Cor de fundo alterada no hover */
-}
+/*.botao-redondo:hover {
+/*    -fx-background-color: #000000; /* Cor de fundo alterada no hover */
+/*}
 
