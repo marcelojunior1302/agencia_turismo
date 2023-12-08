@@ -2,6 +2,8 @@ package br.edu.univasf.agencia_turismo.dao;
 
 import br.edu.univasf.agencia_turismo.model.Reserva;
 import br.edu.univasf.agencia_turismo.util.ConnectionFactory;
+import br.edu.univasf.agencia_turismo.util.ReservaNaoEncontradaException;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -79,9 +81,16 @@ public class ReservaDAO {
         try (PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setInt(1, idReserva);
 
-            stmt.executeUpdate();
+            int linhasAfetadas = stmt.executeUpdate();
+
+            if (linhasAfetadas == 0) {
+                // Se nenhuma linha foi afetada, a reserva não foi encontrada
+                throw new ReservaNaoEncontradaException("Reserva com ID " + idReserva + " não encontrada.");
+            }
         } catch (SQLException e) {
             e.printStackTrace();
+        } catch (ReservaNaoEncontradaException e) {
+            throw new RuntimeException(e);
         }
     }
 
@@ -109,4 +118,39 @@ public class ReservaDAO {
 
         return reservas;
     }
+
+    public List<Reserva> listarReservasCPF(String cpf) {
+        List<Reserva> reservas = new ArrayList<>();
+        Connection conn = ConnectionFactory.getConnection();
+        String sql = "SELECT * FROM reserva WHERE cpf_cliente = ?";
+
+        try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, cpf); // Define o valor do parâmetro CPF
+            try (ResultSet rs = stmt.executeQuery()) {
+                while (rs.next()) {
+                    Reserva reserva = new Reserva();
+                    reserva.setIdReserva(rs.getInt("id_reserva"));
+                    reserva.setCpfCliente(rs.getString("cpf_cliente"));
+                    reserva.setCodigoPacote(rs.getInt("codigo_pacote"));
+                    reserva.setDataReserva(rs.getTimestamp("data_reserva"));
+                    reserva.setQuantidadeVagasSolicitadas(rs.getInt("quantidade_vagas_solicitadas"));
+
+                    reservas.add(reserva);
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return reservas;
+    }
+
 }

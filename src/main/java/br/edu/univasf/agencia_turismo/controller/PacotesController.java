@@ -1,13 +1,11 @@
 package br.edu.univasf.agencia_turismo.controller;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
-
 import java.io.IOException;
 
 public class PacotesController {
@@ -105,7 +103,16 @@ public class PacotesController {
         }
     }
 
-    public void onCancelarReservaButtonClick(ActionEvent actionEvent) {
+    public void onCancelarReservaButtonClick() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("cancelarReserva.fxml"));
+            Parent cancelarReserva = loader.load();
+
+            Scene scene = cancelarReservaButton.getScene();
+            scene.setRoot(cancelarReserva);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void onListarReservaButtonClick() {

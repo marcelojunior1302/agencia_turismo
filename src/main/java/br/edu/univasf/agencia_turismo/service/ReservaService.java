@@ -40,11 +40,22 @@ public class ReservaService {
         reservaDAO.atualizarReserva(reserva);
     }
 
-    public void removerReserva(int idReserva) {
-        reservaDAO.removerReserva(idReserva);
+    public boolean removerReserva(int idReserva) {
+        try {
+            reservaDAO.removerReserva(idReserva);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            // Se a remoção falhar, retorne false
+            return false;
+        }
     }
 
     public List<Reserva> listarReservas() {
         return reservaDAO.listarReservas();
+    }
+
+    public List<Reserva> listarReservasCPF(String cpf) {
+        return reservaDAO.listarReservasCPF(cpf);
     }
 }
