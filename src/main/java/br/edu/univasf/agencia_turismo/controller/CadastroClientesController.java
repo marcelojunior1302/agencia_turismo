@@ -36,7 +36,6 @@ public class CadastroClientesController {
 
     @FXML
     private void finalizarCadastro() {
-
         String cpf = cpfField.getText();
         String nome = nomeField.getText();
         String email = emailField.getText();
@@ -44,14 +43,17 @@ public class CadastroClientesController {
         String historicoViagens = historicoField.getText();
         String preferencias = preferenciasField.getText();
 
-        Cliente novoCliente = new Cliente(cpf, nome, email, telefone, historicoViagens, preferencias);
-
         ClienteService clienteService = new ClienteService();
-        clienteService.adicionarCliente(novoCliente);
 
-        exibirAlerta();
-
-        limparCampos();
+        // Verifica se o CPF já está cadastrado
+        if (clienteService.verificarClienteExistente(cpf)) {
+            exibirAlertaErro("CPF já cadastrado!");
+        } else {
+            Cliente novoCliente = new Cliente(cpf, nome, email, telefone, historicoViagens, preferencias);
+            clienteService.adicionarCliente(novoCliente);
+            exibirAlertaSucesso("Cadastro realizado com sucesso!");
+            limparCampos();
+        }
     }
     @FXML
     private void onVoltarButtonClick() {
@@ -93,5 +95,21 @@ public class CadastroClientesController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private void exibirAlertaErro(String mensagem) {
+        Alert alert = new Alert(AlertType.ERROR);
+        alert.setTitle("Erro");
+        alert.setHeaderText(null);
+        alert.setContentText(mensagem);
+        alert.showAndWait();
+    }
+
+    private void exibirAlertaSucesso(String mensagem) {
+        Alert alert = new Alert(AlertType.INFORMATION);
+        alert.setTitle("Informação");
+        alert.setHeaderText(null);
+        alert.setContentText(mensagem);
+        alert.showAndWait();
     }
 }
