@@ -117,7 +117,13 @@ CREATE TABLE reserva (
 - Abra o SQL shell (psql);
 - Execute `ALTER USER postgres WITH PASSWORD 'nova_senha';`;
 
-### Como resolver o erro `No suitable driver found for jdbc:postgresql://localhost:5432/agencia_turismo`?
+### Como resolver o erro `No suitable driver found`?
+
+```bash
+No suitable driver found for jdbc:postgresql://localhost:5432/agencia_turismo
+```
+
+Se o erro acima surgir durante a execução e o sistema não conseguir acessar o banco de dados, siga o passo a passo abaixo:
 
 - No IntelliJ, acesse `Arquivo` > `Project Structure`;
 - No menu lateral, na seção `Project Settings`, selecione `Modules`;
