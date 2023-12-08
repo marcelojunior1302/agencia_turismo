@@ -76,27 +76,41 @@ public class AtualizacaoPacoteController {
     @FXML
     private void onAtualizarPacoteButtonClick() {
         // Obter os valores dos campos
-        int codigoPacote = Integer.parseInt(codigoPacoteField.getText());
-        BigDecimal preco = new BigDecimal(precoField.getText());
+        String codigoPacoteText = codigoPacoteField.getText();
+        String precoText = precoField.getText();
         String descricao = descricaoField.getText();
         String itinerario = itinerarioField.getText();
         String destino = destinoField.getText();
-        Date data = java.sql.Date.valueOf(dataPicker.getValue());
-        int quantidadeVagas = Integer.parseInt(vagasField.getText());
+        LocalDate dataSelecionada = dataPicker.getValue();
+        String vagasText = vagasField.getText();
+
+        // Verificar se algum campo obrigatório está vazio
+        if (codigoPacoteText.isEmpty() || precoText.isEmpty() || descricao.isEmpty()
+                || itinerario.isEmpty() || destino.isEmpty() || dataSelecionada == null || vagasText.isEmpty()) {
+            showAlert("Erro", "Por favor, preencha todos os campos antes de atualizar o pacote.");
+            return;
+        }
+
 
         // Criar um novo objeto Pacote com os valores atualizados
         // PacoteTuristico(int codigoPacote, String destino, Date data, String itinerario, BigDecimal preco, String descricao, int quantidadeVagas)
-        PacoteTuristico pacoteAtualizado = new PacoteTuristico(codigoPacote, destino, data, itinerario, preco, descricao, quantidadeVagas);
-
+        PacoteTuristico pacoteAtualizado = new PacoteTuristico(
+                Integer.parseInt(codigoPacoteText),
+                destino,
+                java.sql.Date.valueOf(dataSelecionada),
+                itinerario,
+                new BigDecimal(precoText),
+                descricao,
+                Integer.parseInt(vagasText)
+        );
 
         pacoteDAO.atualizarPacote(pacoteAtualizado);
 
-
         showAlert("Sucesso", "Pacote atualizado com sucesso!");
-
 
         limparCampos();
     }
+
 
     @FXML
     private void onVoltarButtonClick() {

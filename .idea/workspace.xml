@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e8b3be-9c65-4a3a-b25e-bff793968bd2" name="Changes" comment="Substituição em todas as Telas do nome do projeto por Logo02 atualizada." />
+    <list default="true" id="08e8b3be-9c65-4a3a-b25e-bff793968bd2" name="Changes" comment="Adição de lógica e tela de cancelar reserva">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/AtualizacaoPacoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/AtualizacaoPacoteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/CadastroClientesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/univasf/agencia_turismo/controller/CadastroClientesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/listarClientes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/edu/univasf/agencia_turismo/controller/listarClientes.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
