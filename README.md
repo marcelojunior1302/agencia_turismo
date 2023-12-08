@@ -26,6 +26,7 @@ O SGAT é um sistema para gestão de agências de turismo, desenvolvido para a d
 
 - IntelliJ IDEA 2023.2.2 (build 232.9921.47)
 - Java 17.0.8
+- JDBC Driver 42.7.1
 - JavaFX 17.0.8
 - PostgreSQL 16.1
 
@@ -46,20 +47,20 @@ Se você já cumpriu os requisitos de software, siga os passos abaixo:
 
 ### Parte 1: instalação do PostgreSQL
 
-- Marque também a opção para instalar o pgAdmin 4
-- Crie uma senha para o administrador do database
-- Configure a porta 5432 ou modifique a porta utilizada na constante URL do arquivo `ConnectionFactory.java`
+- Marque também a opção para instalar o pgAdmin 4;
+- Crie uma senha para o administrador do database;
+- Configure a porta 5432 ou modifique a porta utilizada na constante URL do arquivo `ConnectionFactory.java`;
 
 ### Parte 2: criação do banco de dados
 
-- Acesse o pgAdmin
-- No menu à esquerda, acesse: `PostgreSQL 16` > `Databases` > `Create` > `Database...`
-- Insira "agencia_turismo" no campo de nome do database (correspondente ao arquivo `ConnectionFactory.java`)
-- Salve as alterações
+- Acesse o pgAdmin;
+- No menu à esquerda, acesse: `PostgreSQL 16` > `Databases` > `Create` > `Database...`;
+- Insira "agencia_turismo" no campo de nome do database (correspondente ao arquivo `ConnectionFactory.java`);
+- Salve as alterações;
 
 ### Parte 3: criação das tabelas
 
-- Acesse: `agencia_turismo` > `menu de contexto` > `Query Tool`
+- Acesse: `agencia_turismo` > `menu de contexto` > `Query Tool`;
 - Insira os comandos abaixo para criar as tabelas:
 
 ```sql
@@ -91,26 +92,37 @@ CREATE TABLE reserva (
 );
 ```
 
-- Acesse: `agencia_turismo` > `Menu de contexto` > `Refresh...`
-- Se desejar, confira as tabelas em `agencia_turismo` > `Schemas` > `Tables`
+- Acesse: `agencia_turismo` > `Menu de contexto` > `Refresh...`;
+- Se desejar, confira as tabelas em `agencia_turismo` > `Schemas` > `Tables`;
 
 ### Parte 4: download e execução do projeto
 
-- Faça o `git clone` do repositório
-- Abra a IDE IntelliJ e acesse: `Arquivo` > `Open...` > `Selecionar pasta do projeto`
-- Abra o arquivo `src\main\java\br\edu\univasf\agencia_turismo\Main.java`
-- Execute a aplicação usando o botão de play ou `Shift + F10`
+- Faça o `git clone` do repositório;
+- Abra a IDE IntelliJ e acesse: `Arquivo` > `Open...` > `Selecionar pasta do projeto`;
+- Abra o arquivo `src\main\java\br\edu\univasf\agencia_turismo\Main.java`;
+- Execute a aplicação usando o botão de play ou `Shift + F10`;
 
 <a id="notas"></a>
 ## 📝 O que mais pode ser necessário?
 
 ### Como alterar a porta do PostgreSQL no Windows?
-- Edite a porta em `C:\Program Files\PostgreSQL\<version>\data`
-- Execute `win + R` > `services.msc` > `postgresql-x<arch>-<version>` > `iniciar/reiniciar serviço`
-- Certifique-se de que a porta no arquivo esteja igual à porta no servidor do pgAdmin
-- Clique com o botão direito no servidor > Conectar > Digitar a senha
+
+- Edite a porta em `C:\Program Files\PostgreSQL\<version>\data`;
+- Execute `win + R` > `services.msc` > `postgresql-x<arch>-<version>` > `iniciar/reiniciar serviço`;
+- Certifique-se de que a porta no arquivo esteja igual à porta no servidor do pgAdmin;
+- Clique com o botão direito no servidor > Conectar > Digitar a senha;
 
 ### Como alterar a senha do superuser do PostgreSQL?
 
-- Abra o SQL shell (psql)
-- Execute `ALTER USER postgres WITH PASSWORD 'nova_senha';`
+- Abra o SQL shell (psql);
+- Execute `ALTER USER postgres WITH PASSWORD 'nova_senha';`;
+
+### Como resolver o erro `No suitable driver found for jdbc:postgresql://localhost:5432/agencia_turismo`?
+
+- No IntelliJ, acesse `Arquivo` > `Project Structure`;
+- No menu lateral, na seção `Project Settings`, selecione `Modules`;
+- Selecione `agencia_turismo` e, em seguida, vá para a aba `Dependencies`;
+- Se o driver JDBC não estiver listado, baixe o arquivo `.jar` em: `https://jdbc.postgresql.org/`;
+- Clique no botão `+` acima da lista de dependências (não confundir com o `+` acima do nome do projeto!);
+- Acesse `JAR or Directories...` e busque o arquivo baixado;
+- Aplique as configurações;
