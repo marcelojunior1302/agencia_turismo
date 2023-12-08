@@ -63,7 +63,6 @@
         </padding>
     </Label>
     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#13526B" height="90.0" stroke="#13526b" strokeType="INSIDE" width="1280.0" />
-    <Label alignment="CENTER" prefHeight="90.0" prefWidth="290.0" styleClass="app-title" stylesheets="@style.css" text="SGAT" />
     <TableView fx:id="tableView" layoutX="326.0" layoutY="220.0" prefHeight="389.0" prefWidth="905.0">
       <columns>
           <TableColumn fx:id="coluna_codigo" prefWidth="50.0" text="Código" />
@@ -89,4 +88,9 @@
          </ImageView>
       </children>
    </Group>
+   <ImageView fitHeight="223.0" fitWidth="309.0" layoutX="-9.0" layoutY="-18.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../images/logo_2.png" />
+      </image>
+   </ImageView>
 </AnchorPane>
